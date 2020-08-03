@@ -13,6 +13,6 @@ export class HeroService {
   getHeroes(): Observable<any> {
 
     debugger;
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('http://snheroes.free.beeceptor.com/heroes');
   }
 }
