@@ -1,0 +1,12 @@
+<label>
+    ALL HEROES:
+    <ul>
+        <li *ngFor="let hero of heroes" (click)="chooseHero(hero)" class="badge" [class.selected]="hero === selectedHero">
+            <span >{{hero.name}}</span>
+        </li>
+    </ul>
+
+    <div *ngIf="selectedHero">
+        <sn-hero-detail [hero]="selectedHero"></sn-hero-detail>
+    </div>
+</label>

@@ -1,0 +1,11 @@
+.badge {
+    // color: red;
+
+    &:hover {
+        color: red;
+    }
+
+    &.selected {
+        color: blue;
+    }
+}
