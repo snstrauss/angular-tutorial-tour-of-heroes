@@ -1,5 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * pipes are defined using the '@Pipe' decorator
+ */
 @Pipe({
     name: 'capitalize'
 })

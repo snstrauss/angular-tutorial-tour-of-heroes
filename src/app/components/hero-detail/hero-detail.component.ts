@@ -8,6 +8,7 @@ import { Hero } from '../../interfaces/hero.interface';
 })
 export class HeroDetailComponent implements OnInit {
 
+  // data that comes from out of the component needs to be declared using the '@Input' decorator
   @Input() hero: Hero;
 
   constructor() { }

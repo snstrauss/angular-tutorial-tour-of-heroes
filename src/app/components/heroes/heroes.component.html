@@ -1,10 +1,20 @@
-<label>
+<!-- directive annotations:
+    * is used for structural directives (*ngIf, *ngFor)
+    () is used for data going "up" from the template to the data source (the scope)
+    [] is used for data going "down" from the data source to the template
+    [()] is used for double-binding (ngModel) - data going both ways
+-->
+<div>
     ALL HEROES:
+    <!-- notice the 'else' used in *ngIf -->
     <ul *ngIf="heroes.length; else else_text">
+        <!-- dynamic class can be created with the [class.className] annotation -->
         <li *ngFor="let hero of heroes" (click)="chooseHero(hero)" class="badge" [class.selected]="hero === selectedHero">
             <span >{{hero.name}}</span>
         </li>
     </ul>
+    <!-- in order to show an 'else' block,
+        it needs to be defined in an ng-template directive, and given a name with the # annotation -->
     <ng-template #else_text>
         <h2 >WAITT</h2>
     </ng-template>
@@ -12,4 +22,4 @@
     <div *ngIf="selectedHero">
         <sn-hero-detail [hero]="selectedHero"></sn-hero-detail>
     </div>
-</label>
+</div>
